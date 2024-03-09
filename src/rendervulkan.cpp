@@ -228,6 +228,8 @@ uint32_t VulkanFormatToDRM( VkFormat vkFormat )
 	{
 		if ( s_DRMVKFormatTable[i].vkFormat == vkFormat || s_DRMVKFormatTable[i].vkFormatSrgb == vkFormat )
 		{
+			vk_log.infof( "[DEBUG] VulkanFormatToDRM found drm format 0x% at index 0x%", s_DRMVKFormatTable[i].DRMFormat, i);
+
 			return s_DRMVKFormatTable[i].DRMFormat;
 		}
 	}
